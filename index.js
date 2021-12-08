@@ -26,18 +26,18 @@ app.use(cors(origin));
 app.options("*", cors(origin));
 app.use(express.json());
 
-app.use(morgan("tiny"));
-if (isProduction)
-  app.use(express.static(path.resolve(__dirname, "client/build")));
-
-app.get("/*", function (req, res) {
-  res.sendFile(path.join(__dirname, "client/build", "index.html"));
-});
+app.use(morgan("dev"));
 
 app.use(passport.initialize());
 app.use(apiRouter);
 
 const PORT = process.env.PORT || 5010;
+
+app.use(express.static(path.resolve(__dirname, "client/build")));
+
+app.get("/*", function (req, res) {
+  res.sendFile(path.join(__dirname, "client/build", "index.html"));
+});
 
 app.listen(PORT, () => {
   console.log(`Server is listening on port ${PORT}`);
