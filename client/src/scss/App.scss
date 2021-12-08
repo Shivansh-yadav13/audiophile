@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@600&display=swap");
+* {
+  font-family: "Manrope", sans-serif;
+}
+
+@import "variables";
+@import "mixins";
+@import "global";
+@import "./home/home";
+@import "./categories/home";
+@import "./products/home";
+@import "./checkout/checkout";
+@import "./Registration/register";
+@import "./history/histories";
+
+:root {
+  --toastify-color-info: rgb(0, 0, 0) !important;
+  --toastify-toast-width: 340px !important;
+  --toastify-toast-min-height: 90px !important;
+  --toastify-color-success: #d87d4a !important;
+
+  @include breakpoint-up("medium") {
+    --toastify-toast-min-height: 64px !important;
+  }
+
+  @include breakpoint-up("large") {
+    --toastify-toast-width: 460px !important;
+  }
+}
+
+.Toastify__toast-container--top-right {
+  top: 0rem !important;
+
+  @include breakpoint-up("medium") {
+    top: 5rem !important;
+  }
+  @include breakpoint-up("large") {
+    top: 6rem !important;
+  }
+}
+
+.Toastify__toast-container--top-center {
+  top: 0rem !important;
+
+  @include breakpoint-up("medium") {
+    top: 5rem !important;
+  }
+  @include breakpoint-up("large") {
+    top: 6rem !important;
+  }
+}

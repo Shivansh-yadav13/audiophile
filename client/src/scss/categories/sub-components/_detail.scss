@@ -1,0 +1,93 @@
+.detail {
+  display: grid;
+  grid-template: minmax(auto, 400px) minmax(auto, 400px) / minmax(auto, 400px);
+  place-items: center;
+  justify-content: center;
+
+  @include breakpoint-up(medium) {
+    grid-template: 352px / minmax(auto, 689px);
+  }
+  @include breakpoint-up(large) {
+    grid-template: minmax(auto, 560px) / 1fr 1fr;
+    gap: 125px;
+  }
+  @include breakpoint-up(xlarge) {
+    grid-template: minmax(auto, 560px) / minmax(auto, 555px) minmax(auto, 555px);
+    gap: 125px;
+  }
+  .left {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    &.column-reverse {
+      @include breakpoint-up(large) {
+        grid-area: 1 / 2 / span 1 / span 1;
+      }
+    }
+    img {
+      max-width: 327px;
+      max-height: 352px;
+      width: 100%;
+      height: 100%;
+      border-radius: 8px;
+      @include breakpoint-up(medium) {
+        max-width: 689px;
+        max-height: 352px;
+      }
+      @include breakpoint-up(large) {
+        max-width: 540px;
+        max-height: 560px;
+      }
+    }
+  }
+
+  .right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @include breakpoint-up(large) {
+      align-items: flex-start;
+    }
+    h6 {
+      color: $brown;
+      font-weight: 100;
+      width: 195px;
+      height: 15px;
+      letter-spacing: 10px;
+      margin-top: 37px;
+      margin-bottom: 37px;
+      text-align: center;
+    }
+    h4 {
+      text-align: center;
+      font-size: 35px;
+      max-width: 240px;
+      @include breakpoint-up(large) {
+        text-align: start;
+      }
+    }
+    p {
+      text-align: center;
+      margin-top: 37px;
+      line-height: 1.5;
+      opacity: 0.6;
+      @include breakpoint-up(large) {
+        text-align: start;
+      }
+    }
+    button {
+      margin-top: 37px;
+      width: 160px;
+      height: 48px;
+      border: none;
+      background-color: $brown;
+      color: $white;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $lightsalmon;
+      }
+    }
+  }
+}

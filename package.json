@@ -1,0 +1,32 @@
+{
+  "name": "audiophile-ecommerce-website-react-backends",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "buid": "cd client && npm run build",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "compression": "^1.7.4",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "helmet": "^4.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "mkcert": "^1.4.0",
+    "morgan": "^1.10.0",
+    "passport": "^0.5.0",
+    "passport-google-oauth20": "^2.0.0",
+    "pg": "^8.7.1",
+    "stripe": "^8.176.0",
+    "validator": "^13.7.0"
+  }
+}

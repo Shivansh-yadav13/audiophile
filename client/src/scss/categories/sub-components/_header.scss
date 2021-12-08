@@ -1,0 +1,120 @@
+.headphones-header {
+  background-color: $black;
+  color: white;
+  height: 12rem;
+  @include breakpoint-up(medium) {
+    height: 21rem;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    z-index: 10;
+    justify-content: center;
+    align-items: center;
+    .contents {
+      display: flex;
+      // position: fixed;
+      width: calc(100% - 3rem);
+      top: 0;
+      left: 0;
+      right: 0;
+      align-items: center;
+      justify-content: space-between;
+      padding: 37px 0;
+      max-width: 1440px;
+      z-index: 1;
+      transition: all 200ms ease-in-out;
+
+      border-bottom: 1px solid #3a3a3a;
+      background-color: $black;
+
+      @include breakpoint-up(medium) {
+        margin-left: 40px;
+        margin-right: 40px;
+      }
+      @include breakpoint-up(xlarge) {
+        margin-left: 165px;
+        margin-right: 165px;
+        width: 100%;
+        max-width: 1220px;
+        left: unset;
+        right: unset;
+      }
+
+      .left {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        margin-left: 24px;
+        @include breakpoint-up(medium) {
+          margin: 0;
+        }
+
+        ul {
+          cursor: pointer;
+          li {
+            width: 1rem;
+            height: 3px;
+            background-color: $white;
+            list-style: none;
+            &:not(:last-child) {
+              margin-bottom: 3px;
+            }
+          }
+        }
+
+        h1 {
+          // font-size: 28.6px;
+          margin-left: 2rem;
+          cursor: pointer;
+          @include breakpoint-up(medium) {
+            margin-left: 42px;
+          }
+          @include breakpoint-up(large) {
+            margin: 0;
+          }
+        }
+      }
+
+      .middle {
+        ul {
+          display: flex;
+          list-style: none;
+
+          li {
+            transition: all 200ms ease-in-out;
+            cursor: pointer;
+            &:hover {
+              color: $brown;
+            }
+            &:active {
+              opacity: 0.5;
+            }
+            &:not(:last-child) {
+              margin-right: 35px;
+            }
+          }
+        }
+      }
+      .right {
+        .icon {
+          cursor: pointer;
+          color: white;
+        }
+        margin-right: 24px;
+        @include breakpoint-up(medium) {
+          margin: 0;
+        }
+      }
+    }
+
+    .title {
+      display: grid;
+      place-items: center;
+      height: 100%;
+      // padding-top: 108px;
+    }
+  }
+}

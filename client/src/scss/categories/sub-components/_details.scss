@@ -1,0 +1,22 @@
+.details {
+  @import "./detail";
+
+  &.three {
+    grid-template: repeat(3, 1fr) / 1fr;
+  }
+  &.two {
+    grid-template: repeat(2, 1fr) / 1fr;
+  }
+  &.one {
+    grid-template: 1fr / 1fr;
+  }
+
+  &.details_grids {
+    display: grid;
+    margin: 50px 25px;
+    @include breakpoint-up(large) {
+      margin: 160px 50px;
+    }
+    gap: 5rem;
+  }
+}

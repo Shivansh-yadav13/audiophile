@@ -1,0 +1,117 @@
+.menu {
+  transition: all 300ms ease-in-out;
+  &.close {
+    display: none;
+  }
+
+  &.open {
+    position: fixed;
+    display: grid;
+    align-items: flex-start;
+    background-color: rgba($color: #111, $alpha: 0.5);
+    right: 0;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    padding-top: 5.625rem;
+    z-index: 5;
+    overflow-y: auto;
+
+    .contents {
+      position: relative;
+      width: 100%;
+      overflow-y: scroll;
+      background-color: white;
+      animation: transit 300ms forwards;
+
+      @keyframes transit {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      .container {
+        display: grid;
+        grid-template: repeat(3, 10.3125rem) / minmax(auto, 20.4375rem);
+        gap: 4.25rem;
+        justify-content: center;
+        margin: 1.5rem;
+        margin-top: 5.375rem;
+
+        @include breakpoint-up(medium) {
+          grid-template: minmax(auto, 10.3125rem) / repeat(
+              3,
+              minmax(auto, 13.9375rem)
+            );
+          gap: 0.625rem;
+          margin-top: 6.75rem;
+          margin-bottom: 4.1875rem;
+        }
+
+        .box {
+          background-color: $gray;
+          border-radius: 0.3125rem;
+          display: grid;
+          grid-template: 6.25rem 1.875rem 2.1875rem / 5rem;
+          cursor: pointer;
+          justify-content: center;
+          justify-items: center;
+          align-items: center;
+          align-content: center;
+
+          .headphone {
+            width: 4.995rem;
+            height: 6.5rem;
+            background-image: url("../../../../assets/category-headphones/mobile/image-xx99-mark-one-1.png");
+          }
+
+          .speaker {
+            width: 5.2525rem;
+            height: 6.3125rem;
+            background-image: url("../../../../assets/category-speakers/mobile/image-zx9-1.png");
+          }
+
+          .earphone {
+            width: 6.4375rem;
+            height: 6.5rem;
+            background-image: url("../../../../assets/category-earphones/mobile/image-yx1-earphones-1.png");
+          }
+        }
+
+        .img {
+          z-index: 0;
+          transform: translateY(-3.25rem);
+          background-position: center;
+          background-size: cover;
+          filter: drop-shadow(0rem 2rem 1rem #979797);
+        }
+
+        .shop {
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly;
+
+          p {
+            font-weight: 600;
+            opacity: 0.5;
+          }
+          .arrowForward {
+            color: $brown;
+          }
+        }
+
+        h5,
+        .shop {
+          width: 111px;
+          text-align: center;
+          font-weight: bold;
+          font-size: 1rem;
+          transform: translateY(-1.5625rem);
+        }
+      }
+    }
+  }
+}

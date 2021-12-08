@@ -1,0 +1,100 @@
+.home-banner {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 5.625rem;
+  width: 100%;
+  height: 31.875rem;
+  @include breakpoint-up(large) {
+    height: 45.625rem;
+  }
+  @include breakpoint-up(medium) {
+    height: 40rem;
+  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url("../../../assets/home/mobile/image-header-1.jpg");
+  @include breakpoint-up(large) {
+    align-items: flex-start;
+  }
+
+  @include breakpoint-up(medium) {
+    background-image: url("../../../assets/home/tablet/image-header-1.jpg");
+  }
+  @include breakpoint-up(large) {
+    background-image: url("../../../assets/home/desktop/image-hero-1.jpg");
+  }
+
+  .banner-titles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 7rem;
+
+    @include breakpoint-up(medium) {
+      margin-top: 0;
+    }
+
+    @include breakpoint-up(large) {
+      position: absolute;
+      align-items: flex-start;
+      left: 15%;
+      top: 12rem;
+    }
+
+    .banner-title {
+      margin-bottom: 1.5rem;
+    }
+    .a {
+      margin-top: 1rem;
+
+      p {
+        color: #838383;
+        letter-spacing: 0.5625rem;
+      }
+    }
+    .b {
+      h4 {
+        color: $white;
+        letter-spacing: 5px;
+        font-weight: 400;
+        @include breakpoint-up(large) {
+          font-size: 3.25rem;
+          text-align: start;
+        }
+      }
+    }
+    .c {
+      p {
+        color: #bdbdbd;
+        line-height: 1.5;
+        max-width: 20rem;
+        @include breakpoint-up(medium) {
+          width: 352px;
+        }
+
+        @include breakpoint-up(large) {
+          width: 350px;
+          text-align: start;
+        }
+      }
+    }
+    .d {
+      button {
+        cursor: pointer;
+        background-color: #d87d4a;
+        color: white;
+        padding: 0rem 2rem;
+        height: 48px;
+        border: none;
+
+        &:hover {
+          background-color: $lightsalmon;
+        }
+      }
+    }
+  }
+}

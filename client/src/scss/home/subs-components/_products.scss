@@ -1,0 +1,142 @@
+.home-products {
+  .img {
+    z-index: 0;
+    transform: translateY(-3.25rem);
+    filter: drop-shadow(0rem 2rem 1rem #979797);
+
+    @include breakpoint-up(xlarge) {
+      transform: translateY(-3.9375rem);
+    }
+  }
+  display: grid;
+  margin: 5.75rem 1.5625rem;
+  @include breakpoint-up("medium") {
+    margin-top: 9.25rem;
+    margin-bottom: 6rem;
+  }
+
+  @include breakpoint-up("xlarge") {
+    // margin: 200px 133px;
+  }
+
+  grid-template: repeat(3, 165px) / minmax(auto, 327px);
+  justify-content: center;
+  grid-gap: 4.25rem;
+
+  @include breakpoint-up("medium") {
+    grid-template: minmax(auto, 10.3125rem) / repeat(
+        3,
+        minmax(auto, 13.9375rem)
+      );
+    grid-gap: 0.6rem;
+  }
+
+  @include breakpoint-up("xlarge") {
+    grid-template: 12.75rem / repeat(3, 21.875rem);
+    grid-gap: 1.875rem;
+  }
+
+  .box {
+    background: $gray;
+    border-radius: 0.3125rem;
+    display: grid;
+    grid-template: 6.25rem 1.875rem 2.1875rem / 5rem;
+    cursor: pointer;
+
+    @include breakpoint-up(medium) {
+      width: 13.9375rem;
+      height: 10.3125rem;
+      grid-template: 5.625rem 2.1875rem 2.0625rem / 5.625rem;
+    }
+    @include breakpoint-up(large) {
+      width: 100%;
+      height: 100%;
+    }
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+
+    h5,
+    .shop {
+      transform: translateY(-0.9375rem);
+      text-align: center;
+
+      @include breakpoint-up("medium") {
+        transform: translateY(-1.875rem);
+      }
+      @include breakpoint-up("xlarge") {
+        transform: translateY(-0.25rem);
+      }
+    }
+
+    .headphone {
+      width: 4.995rem;
+      height: 6.5rem;
+      background-image: url("../../../assets/category-headphones/mobile/image-xx99-mark-one-1.png");
+      @include breakpoint-up("medium") {
+        background-image: url("../../../assets/category-headphones/tablet/image-xx99-mark-one-1.png");
+      }
+      @include breakpoint-up("desktop") {
+        background-image: url("../../../assets/category-headphones/desktop/image-xx99-mark-one-1.png");
+      }
+
+      @include breakpoint-up("xlarge") {
+        width: 7.684375rem;
+        height: 10rem;
+      }
+      background-position: center;
+      background-size: cover;
+    }
+
+    .speaker {
+      width: 5.2525rem;
+      height: 6.3125rem;
+      background-image: url("../../../assets/category-speakers/desktop/image-zx9-1.png");
+      @include breakpoint-up("medium") {
+        background-image: url("../../../assets/category-speakers/desktop/image-zx9-1.png");
+      }
+      @include breakpoint-up("large") {
+        background-image: url("../../../assets/category-speakers/desktop/image-zx9-1.png");
+      }
+
+      @include breakpoint-up("xlarge") {
+        width: 7.593125rem;
+        height: 9.125rem;
+      }
+      background-position: center;
+      background-size: cover;
+    }
+
+    .earphone {
+      width: 6.4375rem;
+      height: 6.5rem;
+      background-image: url("../../../assets/category-earphones/desktop/image-yx1-earphones-1.png");
+      @include breakpoint-up("medium") {
+        background-image: url("../../../assets/category-earphones/desktop/image-yx1-earphones-1.png");
+      }
+      @include breakpoint-up("large") {
+        background-image: url("../../../assets/category-earphones/desktop/image-yx1-earphones-1.png");
+      }
+
+      @include breakpoint-up("xlarge") {
+        width: 7.8125rem;
+        height: 7.875rem;
+      }
+
+      background-position: center;
+      background-size: cover;
+    }
+
+    .shop {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+    }
+
+    .arrowForward {
+      color: $brown;
+    }
+  }
+}

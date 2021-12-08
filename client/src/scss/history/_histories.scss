@@ -1,0 +1,77 @@
+.histories {
+  .histories-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+      margin: 1rem;
+    }
+    .histories-contents {
+      width: 100%;
+      max-width: 1220px;
+      overflow-y: auto;
+      border-radius: 4px;
+
+      @import "./history_preloader";
+    }
+
+    .no-record {
+      margin: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: $white;
+      background-color: $white;
+      border-radius: 4px;
+      min-height: 600px;
+
+      .container {
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border-radius: 4px;
+
+        h1 {
+          margin: unset;
+        }
+        h3 {
+          margin-top: 1rem;
+        }
+
+        .logo {
+          display: flex;
+          width: 100%;
+          align-items: center;
+          justify-content: space-around;
+          min-height: 200px;
+          flex-direction: column;
+          margin-top: 1rem;
+          @include breakpoint-up("medium") {
+            flex-direction: row;
+          }
+        }
+        button {
+          border: none;
+          width: 100%;
+          height: 3rem;
+          background-color: $black;
+          color: white;
+          cursor: pointer;
+          transition: all 200ms ease-in-out;
+          border-radius: 4px;
+
+          &:hover {
+            opacity: 0.9;
+          }
+        }
+      }
+    }
+  }
+
+  @import "./history";
+}

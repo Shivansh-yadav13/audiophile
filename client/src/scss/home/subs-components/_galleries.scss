@@ -1,0 +1,226 @@
+.home-galleries {
+  display: flex;
+  flex-direction: column;
+
+  .container {
+    margin: 1.5rem;
+    .box {
+      background-color: $gray;
+      border-radius: 8px;
+    }
+    display: grid;
+    grid-gap: 2rem;
+    justify-content: center;
+    grid-template: 600px 320px 424px / minmax(auto, 400px);
+    @include breakpoint-up(medium) {
+      grid-template: 720px 320px 320px / minmax(auto, 686px);
+    }
+    @include breakpoint-up(large) {
+      grid-template: 560px 320px 320px / minmax(auto, 1110px);
+    }
+
+    .a {
+      background-color: $brown;
+      background-image: url("../../../assets/home/mobile/mobile.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      @include breakpoint-up(medium) {
+        background-image: url("../../../assets/home/tablet/tablet.png");
+      }
+      @include breakpoint-up(large) {
+        background-image: url("../../../assets/home/desktop/desktop.png");
+      }
+
+      .contents {
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: $white;
+        padding: 0rem 1rem;
+        @include breakpoint-up(large) {
+          flex-direction: row;
+        }
+
+        .image {
+          width: 173px;
+          height: 207px;
+          background-image: url("../../../assets/home/mobile/mobile-speaker.png");
+          background-repeat: no-repeat;
+          transform: translateY(-20px);
+          margin-bottom: 1rem;
+          @include breakpoint-up(medium) {
+            width: 198px;
+            height: 237px;
+            background-image: url("../../../assets/home/tablet/tablet-speaker.png");
+          }
+          @include breakpoint-up(large) {
+            width: 411px;
+            height: 464px;
+            background-image: url("../../../assets/home/desktop/desktop-speaker.png");
+            transform: translate(16px, 56px);
+          }
+        }
+
+        .content {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+
+          @include breakpoint-up(large) {
+            align-items: flex-start;
+            margin-left: 154px;
+          }
+
+          h4 {
+            letter-spacing: 1.29px;
+            font-weight: bold;
+            text-align: center;
+            @include breakpoint-up(large) {
+              text-align: start;
+            }
+            margin-bottom: 32px;
+            font-size: 42px;
+            width: 16rem;
+          }
+
+          p {
+            opacity: 0.8;
+            font-weight: 100;
+            text-align: center;
+            @include breakpoint-up(large) {
+              text-align: start;
+            }
+            margin-bottom: 32px;
+            max-width: 23rem;
+          }
+
+          button {
+            width: 160px;
+            height: 48px;
+            color: white;
+            background-color: $black;
+            border: none;
+            cursor: pointer;
+            transition: all 200ms ease-in-out;
+
+            &:hover {
+              background-color: #4c4c4c;
+            }
+          }
+        }
+      }
+    }
+
+    .b {
+      background-image: url("../../../assets/home/mobile/zx7-speaker-background-mobile.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      @include breakpoint-up(medium) {
+        background-image: url("../../../assets/home/tablet/zx7-speaker-background-tablet.png");
+      }
+      @include breakpoint-up(large) {
+        background-image: url("../../../assets/home/desktop//zx7-speaker-background-desktop.png");
+      }
+
+      .contents {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 26px;
+        @include breakpoint-up(medium) {
+          padding-left: 63px;
+        }
+        justify-content: center;
+
+        h4 {
+          font-size: 29px;
+          margin-bottom: 40px;
+        }
+
+        button {
+          width: 160px;
+          height: 48px;
+          border: 1px solid $black;
+          background-color: transparent;
+          transition: all 200ms ease-in-out;
+          color: $black;
+          &:hover {
+            cursor: pointer;
+            background-color: $black;
+            color: white;
+          }
+          &:active {
+            opacity: 0.9;
+          }
+        }
+      }
+    }
+
+    .c {
+      display: grid;
+      grid-template: 1fr 1fr / 1fr;
+      gap: 30px;
+      background-color: transparent;
+
+      @include breakpoint-up(medium) {
+        grid-template: 1fr/ 1fr 1fr;
+        gap: 15px;
+      }
+
+      .img {
+        background-color: #f1f1f1;
+        border-radius: 8px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url("../../../assets/home/mobile/yx1-earphone-mobile.png");
+        @include breakpoint-up(medium) {
+          background-image: url("../../../assets/home/tablet/yx1-earphone-tablet.png");
+        }
+        @include breakpoint-up(large) {
+          background-image: url("../../../assets/home/desktop/yx1-earphone-desktop.png");
+        }
+      }
+      .content {
+        background-color: $gray;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        border-radius: 8px;
+        justify-content: center;
+        padding-left: 26px;
+        @include breakpoint-up(medium) {
+          padding-left: 42px;
+        }
+
+        h4 {
+          font-size: 29px;
+          margin-bottom: 40px;
+        }
+
+        button {
+          width: 160px;
+          height: 48px;
+          border: 1px solid $black;
+          background-color: transparent;
+          transition: all 200ms ease-in-out;
+          color: $black;
+          &:hover {
+            cursor: pointer;
+            background-color: $black;
+            color: white;
+          }
+          &:active {
+            opacity: 0.9;
+          }
+        }
+      }
+    }
+  }
+}

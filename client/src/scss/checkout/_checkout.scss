@@ -1,0 +1,93 @@
+.checkout_home {
+  @import "./modal";
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    margin: 1.4375rem;
+    height: 100%;
+    align-items: center;
+
+    @include breakpoint-up(medium) {
+      margin: 40px;
+    }
+    .max-width {
+      width: 100%;
+      max-width: 69.375rem;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      // @include breakpoint-up(xlarge) {
+      //   max-width: 1110px;
+      // }
+      margin-bottom: 1rem;
+      .goBack {
+        opacity: 0.7;
+        max-width: 45.625rem;
+        @include breakpoint-up(medium) {
+          margin: 0px 0 1.4375rem 0;
+        }
+        cursor: pointer;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .flex-item {
+      max-width: 69.375rem;
+      width: 100%;
+
+      display: flex;
+      flex-direction: column;
+      @include breakpoint-up(xlarge) {
+        flex-direction: row-reverse;
+        max-width: 69.375rem;
+      }
+
+      .allDetails {
+        width: 100%;
+        background: $white;
+        height: 100%;
+        border-radius: 0.5rem;
+
+        align-self: center;
+
+        .info {
+          margin: 1.4375rem;
+          h6 {
+            color: $brown;
+            margin-top: 2.3125rem;
+            margin-bottom: 1.75rem;
+            font-size: 0.8rem;
+          }
+          .flex {
+            display: grid;
+            grid-template: 1fr 1fr 1fr / 1fr;
+            gap: 2rem;
+            @include breakpoint-up(medium) {
+              grid-template: 1fr 1fr / 1fr 1fr;
+              margin: 1rem;
+            }
+          }
+          .shipping {
+            display: grid;
+            grid-template: 1fr 1fr 1fr / 1fr;
+            gap: 2rem;
+
+            @include breakpoint-up(medium) {
+              margin: 1rem;
+              grid-template: 1fr 1fr / 1fr 1fr;
+              .a {
+                grid-area: 1 / 1 / span 1 / span 2;
+              }
+            }
+          }
+          @import "./payment";
+        }
+      }
+
+      @import "./summary";
+    }
+  }
+}

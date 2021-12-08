@@ -1,0 +1,42 @@
+.payment {
+  display: grid;
+
+  h6 {
+    margin: 1rem 0;
+  }
+
+  form {
+    p {
+      color: #eb1c26;
+      position: absolute;
+    }
+
+    button {
+      width: 100%;
+      height: 48px;
+      transition: all 300ms ease-in-out;
+      margin-top: 1.5rem;
+      align-self: center;
+      border: none;
+
+      &:disabled {
+        background: $gray;
+        cursor: not-allowed;
+      }
+    }
+
+    button:not(:disabled) {
+      color: $white;
+      background: $brown;
+      cursor: pointer;
+
+      &:hover {
+        background: $lightsalmon;
+      }
+
+      &:active {
+        opacity: 0.8;
+      }
+    }
+  }
+}

@@ -1,0 +1,103 @@
+.summary {
+  background: $white;
+  border-radius: 8px;
+  margin: 0rem 0rem 2rem 0rem;
+  padding: 1rem;
+
+  @include breakpoint-up(xlarge) {
+    margin-top: unset;
+    width: 49.05%;
+    height: min-content;
+    margin-left: 30px;
+  }
+
+  .list-carts {
+    padding: 0rem 1rem;
+    max-height: 260px !important;
+    overflow: auto;
+  }
+
+  .list-cart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: 1rem 1rem 0rem 0rem;
+    .flex {
+      display: flex;
+    }
+
+    .middle {
+      margin-left: 1rem;
+      p {
+        margin-top: 6px;
+        opacity: 0.6;
+      }
+    }
+    h6 {
+      opacity: 0.6;
+      font-size: 1rem;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+    @include breakpoint-up(xlarge) {
+      &:not(:last-child) {
+        margin-bottom: 24px;
+      }
+    }
+
+    img {
+      width: 64px;
+      border-radius: 8px;
+    }
+
+    .middle {
+      justify-self: center;
+      align-self: center;
+    }
+  }
+
+  .details {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+
+    .same {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+
+      &.grand-total:not(:last-child) {
+        margin: 38px 0 !important;
+      }
+      &:not(:first-child) {
+        margin-top: 10px;
+      }
+
+      p {
+        opacity: 0.6;
+      }
+    }
+
+    button {
+      width: 100%;
+      height: 48px;
+      align-self: center;
+      border: none;
+      color: $white;
+      background: $brown;
+      cursor: pointer;
+
+      &:hover {
+        background: $lightsalmon;
+      }
+
+      &:active {
+        opacity: 0.8;
+      }
+    }
+  }
+}

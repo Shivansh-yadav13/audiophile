@@ -1,0 +1,125 @@
+.home-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #121212;
+  height: 5.625rem;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+
+  z-index: 10;
+
+  @include breakpoint-up(large) {
+    left: 0;
+    right: 0;
+
+    justify-content: space-evenly;
+  }
+
+  .container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #363636;
+    transition: all 200ms ease-in-out;
+
+    @include breakpoint-up(medium) {
+      width: calc(100% - 30px);
+    }
+    @include breakpoint-up(large) {
+      width: 70%;
+    }
+
+    .links {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &.fade-out {
+    transform: translateY(0%);
+  }
+
+  .bar {
+    display: flex;
+    align-items: center;
+    margin-left: 24px;
+    @include breakpoint-up(large) {
+      margin: 0;
+    }
+
+    ul {
+      cursor: pointer;
+      li {
+        width: 1rem;
+        height: 3px;
+        background-color: $white;
+        list-style: none;
+        &:not(:last-child) {
+          margin-bottom: 3px;
+        }
+      }
+    }
+    .title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 76px;
+      @include breakpoint-up(large) {
+        margin-left: 0;
+      }
+      color: $white;
+      img {
+        cursor: pointer;
+        font-weight: 800;
+      }
+    }
+  }
+
+  .links {
+    ul {
+      display: flex;
+
+      justify-content: space-between;
+
+      li {
+        list-style: none;
+
+        h3 {
+          color: white;
+          text-decoration: none;
+          cursor: pointer;
+          transition: all 200ms ease-in-out;
+          font-weight: 500;
+          &:hover {
+            color: $brown;
+          }
+          &:active {
+            color: $brown;
+            opacity: 0.5;
+          }
+        }
+
+        &:not(:last-child) {
+          margin-right: 34px;
+        }
+      }
+    }
+  }
+
+  .trolleyIcon {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: $white;
+    margin-right: 24px;
+    @include breakpoint-up(large) {
+      margin: 0;
+    }
+  }
+}

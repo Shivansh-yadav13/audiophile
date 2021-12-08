@@ -1,0 +1,77 @@
+.home-description {
+  display: grid;
+  justify-content: center;
+  margin: 120px 1.5rem;
+  grid-gap: 1rem;
+  gap: 49px;
+  grid-template: minmax(auto, 300px) 389px / minmax(auto, 327px);
+
+  @include breakpoint-up(medium) {
+    grid-template: 300px 175px / minmax(auto, 689px);
+  }
+
+  @include breakpoint-up(large) {
+    grid-template: 588px / minmax(540px, 540px) minmax(auto, 540px);
+    .contents {
+      grid-area: 1 / 1 / span 1 / span 1;
+    }
+  }
+
+  .img {
+    border-radius: 8px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("../../../assets/home/mobile/image-best-gear-mobile.png");
+    @include breakpoint-up(medium) {
+      background-image: url("../../../assets/home/tablet/image-best-gear-tablet.png");
+    }
+    @include breakpoint-up(large) {
+      background-image: url("../../../assets/home/desktop/image-best-gear-desktop.png");
+    }
+  }
+
+  .contents {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    @include breakpoint-up(large) {
+      justify-content: center;
+      align-items: flex-start;
+    }
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      @include breakpoint-up(large) {
+        align-items: flex-start;
+      }
+      h4 {
+        font-size: 29px;
+        text-align: center;
+        @include breakpoint-up(large) {
+          text-align: start;
+          max-width: 310px;
+        }
+        line-height: 1.5;
+        max-width: 380px;
+      }
+
+      p {
+        margin-top: 1rem;
+        text-align: center;
+
+        @include breakpoint-up(large) {
+          text-align: start;
+          max-width: 455px;
+        }
+
+        opacity: 0.5;
+        line-height: 1.5;
+      }
+    }
+  }
+}
